@@ -2,24 +2,30 @@ import { useEffect, useState } from "react";
 
 export default function App() {
   
-  const [??,??] = useState([]);
+  const [Usuario,setUsuario] = useState([]);
 
   useEffect(() => { 
 
     const buscarUsuario  = async () => {
-                    = await fetch('');
-        const dados =                ;
+      const resposta = await fetch('https://fakestoreapi.com/products');
+        const dados = await resposta.json();                ;
         setUsuario(dados);
     }
     buscarUsuario();
-  }, //complete o código);
+  }, []);
 
   return (
     <>
       <h1>Usuário</h1>
       <ul>
-        {}
-      </ul>
-    </>
-  );
+        {lista.map(produto => (
+        <li key={produto.userId}>
+          <h2>{produto.id}</h2>
+          <p>{produto.title}</p>
+         </li>
+    
+  ))}
+  </ul>
+</>
+);
 }
