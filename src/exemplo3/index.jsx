@@ -25,7 +25,7 @@ export default function App() {
           </li>
 
         ))
-            //complete o código
+            
         }
       </ul>
     </>
